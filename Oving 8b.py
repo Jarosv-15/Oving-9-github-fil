@@ -4,6 +4,9 @@ class Norge:
         self.svar_alternativ = svar_alternativ
         self.rett_svar = int(rett_svar)
 
+    def kort_svar_tekst(self):
+        return
+
     def __str__(self):
         alle_alternativ = '\n'.join(self.svar_alternativ)
         return f'Spørsmål: {self.sporsmal_txt} \n \n'\
@@ -16,25 +19,11 @@ class Norge:
         else:
             print("Sorry, det er feil\n")
 
+def filinfo():
+    sporsmolfil = open("sporsmaalsfil.txt", "r")
+
 
 if __name__ == '__main__':
-    a = ["Oslo", "Stavanger", "Bergen", "Trondheim", "Tromsø"]
-
-    sporsmal1 = "Hva er hovedstanden i Norge?"
-    svar1 = 1
-
-    sporsmal2 = "I hvilken by ligger UIS i?"
-    svar2 = 2
-
-    q1 = Norge(sporsmal1, a, svar1)
-    print(q1)
-    qq1 = int(input("Skriv inn svaret ditt her: "))
-    q1.sjekk_svar(qq1)
-
-    q2 = Norge(sporsmal2, a, svar2)
-    print(q2)
-    qq2 = qq1 = int(input("Skriv inn svaret ditt her: "))
-    q2.sjekk_svar(qq2)
 
 
 
