@@ -1,41 +1,41 @@
-
-
-class QuestionGame:
-    def __init__(self, question_txt, answer_alternatives, correct_answer):
-        self.question_txt = question_txt
-        self.answer_alternatives = list(answer_alternatives)
-        self.correct_answer = int(correct_answer)
-
-    def questions(self):
-        return '\n'.join('{}: {}'.format(*k) for k in enumerate(self.answer_alternatives, 1))
+class Norge:
+    def __init__(self, sporsmal_txt, svar_alternativ, rett_svar):
+        self.sporsmal_txt = sporsmal_txt
+        self.svar_alternativ = svar_alternativ
+        self.rett_svar = int(rett_svar)
 
     def __str__(self):
-        return f"{self.question_txt}?\n" \
-               f"{self.questions()}"\
+        alle_alternativ = '\n'.join(self.svar_alternativ)
+        return f'Spørsmål: {self.sporsmal_txt} \n \n'\
+                f'Alternativ: \n' \
+                f'{alle_alternativ}'
 
-
-    def check_answer(self, answer):
-        if answer == self.correct_answer:
-            print("Thats correct!\n")
+    def sjekk_svar(self, svar):
+        if svar == self.rett_svar:
+            print("Det er rett!\n")
         else:
-            print("Sorry, thats not correct\n")
+            print("Sorry, det er feil\n")
 
 
 if __name__ == '__main__':
-    a = ["Amsterdam", "Rotterdam", "Den Haag", "Tilburg", "Eindhoven"]
+    a = ["Oslo", "Stavanger", "Bergen", "Trondheim", "Tromsø"]
 
-    question1 = "Whats the capitol of the Netherlands"
-    answer1 = 1
+    sporsmal1 = "Hva er hovedstanden i Norge?"
+    svar1 = 1
 
-    question2 = "Where was the company Phillips founded?"
-    answer2 = 5
+    sporsmal2 = "I hvilken by ligger UIS i?"
+    svar2 = 2
 
-    q1 = QuestionGame(question1, a, answer1)
+    q1 = Norge(sporsmal1, a, svar1)
     print(q1)
-    qq1 = int(input("Write in your answer here: "))
-    q1.check_answer(qq1)
+    qq1 = int(input("Skriv inn svaret ditt her: "))
+    q1.sjekk_svar(qq1)
 
-    q2 = QuestionGame(question2, a, answer2)
+    q2 = Norge(sporsmal2, a, svar2)
     print(q2)
-    qq2 = qq1 = int(input("Write in your answer here: "))
-    q2.check_answer(qq2)
+    qq2 = qq1 = int(input("Skriv inn svaret ditt her: "))
+    q2.sjekk_svar(qq2)
+
+
+
+#hjelp prøver å forstå dette her marie WHERE ARE YOU
