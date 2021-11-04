@@ -1,4 +1,4 @@
-class Norge:
+class Quiz:
     def __init__(self, sporsmal_txt, svar_alternativ, rett_svar):
         self.sporsmal_txt = sporsmal_txt
         self.svar_alternativ = svar_alternativ
@@ -18,14 +18,38 @@ class Norge:
             print("Det er rett!\n")
         else:
             print("Sorry, det er feil\n")
+objektliste = []
 
 def filinfo():
-    sporsmolfil = open("sporsmaalsfil.txt", "r")
+    sporsmaalfil = open("sporsmaalsfil.txt", "r", )
+    for linje in sporsmaalfil:
+        linjer = linje.split(":")
+        sporsmal_txt = linjer[0]
+
+        svar_alternativ = []
+        alternatives_str = linjer[2]
+        alternatives_str = alternatives_str.replace('[', '')
+        alternatives_str = alternatives_str.replace(']', '')
+        alternativer_list = alternatives_str.split(',')
+        for alternativ in alternativer_list:
+            endelig_alternativ = alternativ.strip()
+            svar_alternativ.append(endelig_alternativ)
+
+        rett_svar = linjer[1]
+
+        q = Quiz(sporsmal_txt, svar_alternativ, rett_svar)
+        objektliste.append(q)
+
+    return objektliste
 
 
 if __name__ == '__main__':
-
-
+    filinfo()
+    print(objektliste[0])
+    #for i in range(len(filinfo())):
+    #    objekter = Norge(i)
+   #     objekter.append(objectliste)
+   # print(objectliste)
 
 #hjelp prøver å forstå dette her marie WHERE ARE YOU
 
