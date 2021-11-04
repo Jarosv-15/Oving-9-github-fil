@@ -28,3 +28,29 @@ if __name__ == '__main__':
 
 
 #hjelp prøver å forstå dette her marie WHERE ARE YOU
+
+#Navn_fil_1 = str(input("Hva heter filen? :"))
+#Navn_nyfil_2 = str(input("Hva skal den nye filen hete? :"))
+
+#try:
+#    org_fil = open(Navn_fil_1, "r", encoding = "UTF-8")
+ #   ny_fil = open(Navn_nyfil_2, "w")
+
+#   for linje in org_fil:
+ #     lu_mellomrom = linje.strip()
+#
+ #       delstreng = lu_mellomrom.find("From:") # index
+  #      start_linje = lu_mellomrom.find("<") # index
+ #       slutt_linje = lu_mellomrom.find(">") # index
+#
+ #       if delstreng != -1:
+ #           resultat = lu_mellomrom[start_linje + 1 : slutt_linje]
+ #           if resultat.find("@") != -1:
+ #                print(resultat)
+#            else:
+ #               print("\n")
+
+#    org_fil.close()
+
+
+#Oppgave c
