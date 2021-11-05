@@ -10,7 +10,6 @@ class Quiz:
 
         index_svar = int(self.rett_svar)
         svar_str = (self.svar_alternativ)[index_svar]
-
         return f"Korrekt svar:{svar_str}"
 
     def __str__(self):
@@ -51,4 +50,4 @@ def filinfo():
 
 if __name__ == '__main__':
     filinfo()
-    print(objektliste[0])
+
