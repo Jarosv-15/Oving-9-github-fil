@@ -47,7 +47,6 @@ def filinfo():
 
     return objektliste
 
-
 if __name__ == '__main__':
     filinfo()
     # Spillernes svar
@@ -63,7 +62,6 @@ if __name__ == '__main__':
         player2_svar = int(input("Velg et svaralternativ for spiller 2: "))
         print(f" \n" f"{Quiz.korrekt_svar_tekst()} \n")
 
-        # Sjekker hvem av spillerne som evt fikk riktig og legger til poeng
         correct_ans = int(Quiz.rett_svar)
 
         if player1_svar == correct_ans and player2_svar != correct_ans:
@@ -87,7 +85,5 @@ if __name__ == '__main__':
         else:
             return "ingen"
 
-    print(
-        f"Spiller 1 har totalt: {player1_score} poeng \nSpiller 2 har totalt: {player2_score} poeng \n"
-        f"Dette betyr at {winner(player1_score, player2_score)} er vinneren!"
-    )
+    print(f"Spiller 1 har totalt: {player1_score} poeng \nSpiller 2 har totalt: {player2_score} poeng \n"
+          f"Dette betyr at {winner(player1_score, player2_score)} er vinneren!")
